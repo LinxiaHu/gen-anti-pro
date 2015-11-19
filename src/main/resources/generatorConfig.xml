@@ -20,7 +20,7 @@
 
 		<!-- 数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://127.0.0.1:3306/goods"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/sakila"
 			userId="root" password="125885">
 		</jdbcConnection>
 
@@ -29,14 +29,14 @@
 		</javaTypeResolver>
 
 		<!-- 数据表对应的model 层 -->
-		<javaModelGenerator targetPackage="com.hd.ssm.pojo"
+		<javaModelGenerator targetPackage="com.hd.sakila.pojo"
 			targetProject="src">
 			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- sql mapper 隐射配置文件 -->
-		<sqlMapGenerator targetPackage="com.hd.ssm.mapper"
+		<sqlMapGenerator targetPackage="com.hd.sakila.mapper"
 			targetProject="src">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
@@ -44,18 +44,27 @@
 
 		<!-- 在ibatis2 中是dao层，但在mybatis3中，其实就是mapper接口 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.hd.ssm.mapper" targetProject="src">
+			targetPackage="com.hd.sakila.mapper" targetProject="src">
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 
 		<!-- 要对那些数据表进行生成操作，必须要有一个. -->
-		<table tableName="t_admin"></table>
-		<table tableName="t_book"></table>
-		<table tableName="t_cartitem"></table>
-		<table tableName="t_category"></table>
-		<table tableName="t_order"></table>
-		<table tableName="t_orderitem"></table>
-		<table tableName="t_user"></table>
+		<table tableName="actor"></table>
+		<table tableName="address"></table>
+		<table tableName="category"></table>
+		<table tableName="city"></table>
+		<table tableName="country"></table>
+		<table tableName="customer"></table>
+		<table tableName="film"></table>
+		<table tableName="film_actor"></table>
+		<table tableName="film_category"></table>
+		<table tableName="film_text"></table>
+		<table tableName="inventory"></table>
+		<table tableName="language"></table>
+		<table tableName="payment"></table>
+		<table tableName="rental"></table>
+		<table tableName="staff"></table>
+		<table tableName="store"></table>
 
 	</context>
 </generatorConfiguration>

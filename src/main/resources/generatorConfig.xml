@@ -7,7 +7,7 @@
 
 	<!-- 配置mysql 驱动jar包路径.用了绝对路径 -->
 	<classPathEntry
-		location="C:\mysql-connector-java-5.1.26-bin.jar" />
+		location="d:\mysql-connector-java-5.1.26-bin.jar" />
 
 	<context id="testTables" targetRuntime="MyBatis3">
 
@@ -21,7 +21,7 @@
 		<!-- 数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://127.0.0.1:3306/sakila"
-			userId="root" password="125885">
+			userId="root" password="123456">
 		</jdbcConnection>
 
 		<javaTypeResolver>
